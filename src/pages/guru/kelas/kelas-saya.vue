@@ -72,13 +72,13 @@ export default {
     }
   },
   created () {
-		this.getData()
-		// this.$store.commit('changeName', 'Ariz')
-		// console.log(this.$store.getters.name)
+    this.getData()
+    // this.$store.commit('changeName', 'Ariz')
+    // console.log(this.$store.getters.name)
   },
   methods: {
     async onInputVideo (evt) {
-			this.$parent.isLoading = true
+      this.$parent.isLoading = true
       const self = this
       const file = document.getElementById('video').files[0]
       const ref = `video/${file.name}`
@@ -94,8 +94,8 @@ export default {
         .catch(e => {
           console.log(e)
           Swal.fire('Error', 'Terjadi Kesalahan saat upload foto!', 'error')
-				})
-			this.$parent.isLoading = false
+        })
+      this.$parent.isLoading = false
     },
     async getData () {
       this.$parent.isLoading = true

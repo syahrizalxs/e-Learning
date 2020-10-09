@@ -90,10 +90,10 @@ export default {
   data () {
     return {
       form: {
-				username: '',
-				fullname: '',
-				nip: ''
-			},
+        username: '',
+        fullname: '',
+        nip: ''
+      },
       modalShow: false,
       guruList: []
     }
@@ -123,8 +123,8 @@ export default {
       const self = this
       db.collection('users').doc(this.form.username).set({
         fullname: this.form.fullname,
-				username: this.form.username,
-				nip: this.form.nip,
+        username: this.form.username,
+        nip: this.form.nip,
         password: '123qwe',
         role: 'guru'
       })

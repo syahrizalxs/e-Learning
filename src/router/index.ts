@@ -1,17 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-const DefaultContainer = () => import(/* webpackChunkName: "BaseContainer" */'../Layout/DefaultContainer')
-const Login = () => import(/* webpackChunkName: "Login" */'../pages/Login')
-const MataPelajaran = () => import(/* webpackChunkName: "MataPelajaran" */'../pages/MataPelajaran')
-const Profile = () => import(/* webpackChunkName: "Profile" */'../pages/Profile')
+const DefaultContainer = () => import(/* webpackChunkName: "BaseContainer" */'../Layout/DefaultContainer.vue')
+const Login = () => import(/* webpackChunkName: "Login" */'../pages/Login.vue')
+const MataPelajaran = () => import(/* webpackChunkName: "MataPelajaran" */'../pages/MataPelajaran.vue')
+const Profile = () => import(/* webpackChunkName: "Profile" */'../pages/Profile.vue')
 
-const MasterMataPelajaran = () => import(/* webpackChunkName: "MasterMapel" */'../pages/master/mata-pelajaran')
-const MasterMurid = () => import(/* webpackChunkName: "MasterMurid" */'../pages/master/murid')
-const MasterGuru = () => import(/* webpackChunkName: "MasterMurid" */'../pages/master/guru')
+const MasterMataPelajaran = () => import(/* webpackChunkName: "MasterMapel" */'../pages/master/mata-pelajaran.vue')
+const MasterMurid = () => import(/* webpackChunkName: "MasterMurid" */'../pages/master/murid.vue')
+const MasterGuru = () => import(/* webpackChunkName: "MasterMurid" */'../pages/master/guru.vue')
 
-const KelasSaya = () => import(/* webpackChunkName: "KelasSaya" */'../pages/guru/kelas/kelas-saya')
-const KelasSayaAdd = () => import(/* webpackChunkName: "KelasSaya" */'../pages/guru/kelas/kelas-saya-add')
+const KelasSaya = () => import(/* webpackChunkName: "KelasSaya" */'../pages/guru/kelas/kelas-saya.vue')
+const KelasSayaAdd = () => import(/* webpackChunkName: "KelasSaya" */'../pages/guru/kelas/kelas-saya-add.vue')
 
 Vue.use(VueRouter)
 
@@ -72,7 +72,8 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   console.log({ next, to, from })
-  const token = JSON.parse(localStorage.getItem('userInfo'))
+  let token = {}
+  token = JSON.parse(localStorage.getItem('userInfo')!)
   const isLoggedin = !!token
   const isPublic = to.matched.some(record => record.meta.public)
   if (!isPublic && !isLoggedin) {

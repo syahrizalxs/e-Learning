@@ -7,7 +7,7 @@ import router from './router'
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import VCalendar from 'v-calendar'
 import VueTheMask from 'vue-the-mask'
-import Loading from '../src/components/Loading'
+import Loading from '../src/components/Loading.vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'

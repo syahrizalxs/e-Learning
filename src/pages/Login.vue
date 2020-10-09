@@ -93,7 +93,7 @@
 <script>
 import firebase from '../config/firebase'
 import Swal from 'sweetalert2'
-import Loading from '../components/Loading'
+import Loading from '../components/Loading.vue'
 
 const db = firebase.firestore()
 

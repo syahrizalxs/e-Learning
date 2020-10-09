@@ -90,10 +90,10 @@ export default {
   data () {
     return {
       form: {
-				username: '',
-				fullname: '',
-				nis: ''
-			},
+        username: '',
+        fullname: '',
+        nis: ''
+      },
       modalShow: false,
       muridList: []
     }
@@ -124,8 +124,8 @@ export default {
       db.collection('users').doc(this.form.username).set({
         fullname: this.form.fullname,
         username: this.form.username,
-				password: '123qwe',
-				nis: this.form.nis,
+        password: '123qwe',
+        nis: this.form.nis,
         role: 'murid'
       })
         .then(function () {
