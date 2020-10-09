@@ -6,7 +6,7 @@
     </div>
     <div class="col-4">
       <div class="container form-wrapper">
-        <h5>Selamat Datang di E-Learning SD</h5>
+        <h5>Selamat Datang di E-Learning SD Tai</h5>
         <b-form class="mt-4" v-if="loginComponent">
           <h6 class="text-info">Silahkan Masuk untuk melanjutkan</h6>
           <b-form-group
